@@ -486,9 +486,6 @@ instance Monad m => Monad (GenT m) where
           runGenT size sk . k =<<
           runGenT size sm m
 
-  fail =
-    Fail.fail
-
 instance Monad m => MonadFail (GenT m) where
   fail =
     error
